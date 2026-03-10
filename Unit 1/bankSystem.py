@@ -24,7 +24,7 @@ class MarDaGoatBanking:
     def accessAccount(self,name,password):
         return
 acc1= MarDaGoatBanking('jimmy','33223', 'idk lane', 100)
-acc2= MarDaGoatBanking('selina','99292','123 ark road', 2000)
+acc2= MarDaGoatBanking('bruce','99292','123 arkham road', 2000000)
 
 #acc1.withdrawl(101)
 #acc2.deposit(22)
