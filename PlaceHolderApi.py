@@ -1,6 +1,6 @@
 import requests
 
-query = 'https://pokeapi.co/api/v2/pokemon/rattata/'
+query = 'https://pokeapi.co/api/v2/pokemon/pikachu'
 response = requests.get(query)
 
 
