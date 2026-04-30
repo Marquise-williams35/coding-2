@@ -8,19 +8,29 @@ connect = sqlite3.connect('test.db')
 cursor = connect.cursor()
 
 #4. we need to create a schema (structure) for our data
-cursor.execute('''
-    CREATE TABLE computers(
-    id INTERGER PRIMARY KEY,
-    model TEXT,
-    color TEXT,
-    hasWebCam BOOL,
-    memory INTERGER,
-    price INTERGER
-               )''')
+# cursor.execute('''
+#     CREATE TABLE computers(
+#     id INTERGER PRIMARY KEY,
+#     model TEXT,
+#     color TEXT,
+#     hasWebCam BOOL,
+#     memory INTERGER,
+#     price INTERGER
+#                )''')
+
+# cursor.execute('''
+#     INSERT INTO computers(model,color,hasWebcam,memory,price)
+#     values('apple m4','blue',True, 8, 1500)''')
+
+# cursor.execute('''
+#     INSERT INTO computers(model,color,hasWebcam,memory,price)
+#     values('HP','green',True, 10, 1700)''')
 
 cursor.execute('''
-    INSERT INTO computers(model,color,hasWebcam,memory,price)
-    values('apple m4','blue',True, 8, 1500)''')
+    UPDATE computers
+    SET color = 'red'
+    WHERE id = 3
+               ''')
 
 connect.commit()
 
